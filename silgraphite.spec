@@ -2,7 +2,7 @@ Summary:	Font rendering capabilities for complex non-Roman writing systems
 Summary(pl.UTF-8):	Wsparcie renderowania złożonych systemów pisma nierzymskiego
 Name:		silgraphite
 Version:	2.3.1
-Release:	3
+Release:	4
 License:	LGPL v2.1+ or CPL v0.5+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/silgraphite/%{name}-%{version}.tar.gz
