@@ -2,7 +2,7 @@ Summary:	Font rendering capabilities for complex non-Roman writing systems
 Summary(pl.UTF-8):	Wsparcie renderowania złożonych systemów pisma nierzymskiego
 Name:		silgraphite
 Version:	2.3.1
-Release:	5
+Release:	6
 License:	LGPL v2.1+ or CPL v0.5+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/silgraphite/%{name}-%{version}.tar.gz
@@ -81,9 +81,6 @@ cp -p wrappers/xft/silgraphite-xft.pc $RPM_BUILD_ROOT%{_pkgconfigdir}
 # and now obsoleted by pkg-config (and poisoned in case of wrappers
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/libgraphite*.la
 
-# dlopened module
-%{__rm} $RPM_BUILD_ROOT%{_libdir}/pango/*/modules/graphite/*.{a,la}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -99,8 +96,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libgraphite-ft.so.0
 %attr(755,root,root) %{_libdir}/libgraphite-xft.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libgraphite-xft.so.0
-%dir %{_libdir}/pango/*/modules/graphite
-%attr(755,root,root) %{_libdir}/pango/*/modules/graphite/pango-graphite.so
 
 %files devel
 %defattr(644,root,root,755)
