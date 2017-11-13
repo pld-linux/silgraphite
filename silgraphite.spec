@@ -64,7 +64,8 @@ Statyczna biblioteka silgraphite.
 %setup -q
 
 %build
-%configure
+%configure \
+	--without-pangographite
 %{__make}
 
 %install
